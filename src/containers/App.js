@@ -23,7 +23,7 @@ componentDidMount(){
       return (
         <div className="tc">
         <h1 className="f1">Star Wars</h1>
-        <CardList chars={chars}/>
+        <CardList chars={chars} />
 
         </div>
       );

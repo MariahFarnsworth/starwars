@@ -1,21 +1,31 @@
 import React from 'react';
 import Card from './Card';
 
-const CardList=({chars})=>{
+class CardList extends React.Component{
+
+
+render(){
+    
     return(
         <div>
             {
-                chars.map((char, i)=>{
+                this.props.chars.map((char, i)=>{
                     return(
-                        <Card 
-                        key={chars[i].name}
-                        name={chars[i].name}
+                        <Card
+                        key={this.props.chars[i].name}
+                        name={this.props.chars[i].name}
+
+                        height={this.props.chars[i].height}
+                        mass={this.props.chars[i].mass}
+                        gender={this.props.chars[i].gender}
+                        birth_year={this.props.chars[i].birth_year}
                         />
                     );
                 })
             }
         </div>
     );
+}
 }
 
 export default CardList;
